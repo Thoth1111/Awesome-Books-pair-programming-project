@@ -28,8 +28,8 @@ window.addEventListener("load", () => {
     if (!storedBooks) {
         empty.innerHTML = "No books in the library"
     }
-    else{
-        empty.style.display="none"
+    else {
+        empty.style.display = "none"
         let eachTableRow = ""
         for (let i = 0; i < storedBooks.length; i += 1) {
             // console.log(storedBooks[i]);
@@ -42,17 +42,27 @@ window.addEventListener("load", () => {
                         <td>${storedBooks[i].authorKey}</td>
                         <td><button id=${i} class="remove_btn">Remove</button></td>
                 </tr>`
-            } 
-        
-        tableBody.innerHTML=eachTableRow
+        }
+
+        tableBody.innerHTML = eachTableRow
     }
 
-}) 
+})
 
-let deleteBookBtn = document.querySelectorAll(".remove_btn") 
-deleteBookBtn.addEventListener('click', function removeBtn(e) {
-    e.preventDefault() 
-    let index = deleteBookBtn.getAttribute('id') 
+let deleteBookBtn = document.querySelector(".remove_btn")
+let bookToRemove = null;
+deleteBookBtn.addEventListener('click', (e) => {
+    let index = deleteBookBtn.getAttribute('id')
+
     console.log(` ${index} to be removed`);
-   })
-
+    if (!index) {
+        return;
+    }
+    else {
+        bookToRemove = storedBooks[index];
+        bookArr = storedBooks.filter(aBook, () =>
+            aBook.tittle != bookToRemove.tittle
+        ); 
+            localStorage.setItem('Books', JSON.stringify(bookArr));
+        }
+    }); 
