@@ -11,7 +11,7 @@
 <body>
     <h1>Awesome Books</h1> 
     <section class="Book-list">
-       
+       <div class="empty_bookstore"></div>
         <table class="table">
             <thead class="table_head">
                 <tr>
@@ -20,22 +20,22 @@
                 </tr>
             </thead>
             <tbody class="table_body">
-                <tr>
+                <!-- <tr>
                     <td></td>
                     <td></td>
                     <td><button id=${i} class="remove-btn">Remove</button></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </section>
-    <form method="post" action="#">
+    <form class="book_form">
         <fieldset class="form_data">
             <input type="text" id="title" name="title" placeholder="Title" value="" class="title_input" required> <br><br>
             <input type="text" id="author" name="author" placeholder="Author" value="" class="author_input" required>
         </fieldset>
 
         <fieldset class="form_action">
-            <button class="add_btn" type="button" id="add">Add</button>
+            <button class="add_btn" type="submit" id="add">Add</button>
         </fieldset>
     </form>
 
