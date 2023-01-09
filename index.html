@@ -23,22 +23,23 @@
                 <tr>
                     <td></td>
                     <td></td>
+                    <td><button id=${i} class="remove-btn">Remove</button></td>
                 </tr>
             </tbody>
         </table>
     </section>
     <form method="post" action="#">
         <fieldset class="form_data">
-            <input type="text" id="title" name="title" placeholder="Title" required> <br><br>
-            <input type="text" id="author" name="author" placeholder="Author" required>
+            <input type="text" id="title" name="title" placeholder="Title" value="" class="title_input" required> <br><br>
+            <input type="text" id="author" name="author" placeholder="Author" value="" class="author_input" required>
         </fieldset>
 
         <fieldset class="form_action">
-            <button type="button" id="add">Add</button>
+            <button class="add_btn" type="button" id="add">Add</button>
         </fieldset>
     </form>
 
 </body>
-<script type="text/javascript" src="myscript.js"></script>
+<script src="./index.js"></script>
 
 </html>
