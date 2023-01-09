@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Books</title>
 </head>
+
 <body>
-    <h1>Awesome Books</h1>
-    <div id="Book-list"></div>
-    <section>
-        <table>
-            
+    <h1>Awesome Books</h1> 
+    <section class="Book-list">
+       
+        <table class="table">
+            <thead class="table_head">
+                <tr>
+                    <td>Book Tittle</td>
+                    <td>Book Author</td>
+                </tr>
+            </thead>
+            <tbody class="table_body">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
         </table>
     </section>
     <form method="post" action="#">
-        <input type="text" id="title" name="title" placeholder="Title" required> <br><br>
-        <input type="text" id="author" name="author" placeholder="Author" required> <br><br>
-        <button type="button" id="add">Add</button>
+        <fieldset class="form_data">
+            <input type="text" id="title" name="title" placeholder="Title" required> <br><br>
+            <input type="text" id="author" name="author" placeholder="Author" required>
+        </fieldset>
+
+        <fieldset class="form_action">
+            <button type="button" id="add">Add</button>
+        </fieldset>
     </form>
-    
-    <script type="text/javascript" src="myscript.js"></script>
+
 </body>
+<script type="text/javascript" src="myscript.js"></script>
+
 </html>
