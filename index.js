@@ -13,8 +13,8 @@ function displayBooks(booksData) {
             <td>${booksData[i].titleKey}</td>
             <td>${booksData[i].authorKey}</td>
             <td><button type="button" id=${i} class="remove_btn">Remove</button></td>
-            <hr>
-        </tr>`;
+        </tr>
+        `;
   }
   tableBody.innerHTML = eachTableRow;
   const deleteBookBtn = document.querySelectorAll('.remove_btn');
