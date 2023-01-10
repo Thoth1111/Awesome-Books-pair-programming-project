@@ -3,7 +3,7 @@ const author = document.querySelector('.author_input');
 const empty = document.querySelector('.empty_bookstore');
 const form = document.querySelector('.book_form');
 const tableBody = document.querySelector('.table_body');
-const storedBooks = JSON.parse(localStorage.getItem('bookstored'));
+let storedBooks = JSON.parse(localStorage.getItem('bookstored'));
 
 function displayBooks(booksData) {
   let eachTableRow = '';
@@ -22,9 +22,6 @@ function displayBooks(booksData) {
     elementBtn.addEventListener('click', () => {
       const index = elementBtn.getAttribute('id');
       storedBooks.splice(index, 1);
-      /* eslint-disable */
-      localStorage.clear;
-      /* eslint-enable */
       localStorage.setItem('bookstored', JSON.stringify(storedBooks));
       displayBooks(storedBooks);
     });
@@ -46,6 +43,9 @@ form.addEventListener('submit', (e) => {
     titleKey: title.value,
     authorKey: author.value,
   };
+  if (!storedBooks) {
+    storedBooks = [];
+  }
   storedBooks.push(booksData);
   localStorage.setItem('bookstored', JSON.stringify(storedBooks));
   displayBooks(storedBooks);
