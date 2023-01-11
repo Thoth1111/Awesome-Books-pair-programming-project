@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Books</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Awesome Books</h1>
+    <section class="Book-list">
+        <div class="empty_bookstore"></div>
+        <table class="table">
+            <thead class="table_head">
+                <tr>
+                    <td>Book Title</td>
+                    <td>Book Author</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody class="table_body">
+            </tbody>
+        </table>
+    </section>
+    <form class="book_form">
+        <h2>Add a new book</h2>
+        <input type="text" id="title" name="title" placeholder="Title" value="" class="title_input" required>
+        <br><br>
+        <input type="text" id="author" name="author" placeholder="Author" value="" class="author_input" required>
+         <button class="add_btn" type="submit" id="add">Add</button>
+    </form>
+
+</body>
+<script type="module" src="./index.js"></script>
+
+</html>
