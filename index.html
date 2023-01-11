@@ -6,34 +6,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Books</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="singlepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head> 
 
 <body>
-    <h1>Awesome Books</h1>
-    <section class="Book-list">
-        <div class="empty_bookstore"></div>
-        <table class="table">
-            <thead class="table_head">
-                <tr>
-                    <td>Book Title</td>
-                    <td>Book Author</td>
-                    <td></td>
-                </tr>
-            </thead>
-            <tbody class="table_body">
-            </tbody>
-        </table>
+
+    <nav>
+
+        <div>
+            <h4>Awesome Books</h4>
+        </div>
+
+        <ul>
+            <li data-tab="1">List</li>
+            <li data-tab="2">Add new</li>
+            <li data-tab="3">Contact</li>
+        </ul>
+    </nav>
+
+    <div>
+        <h5>Date.now</h5>
+    </div>
+
+    <!--  -->
+
+    <section class="tab_content_1">
+
+        <header>
+            <h3>All awesome books</h3>
+        </header>
+
+        <article>
+            <ul>
+                <li>
+                    <p>"Title" by Author </p>
+                    <button>Remove</button>
+                </li>
+
+                <li>
+                    <p>"Title" by Author </p>
+                    <button>Remove</button>
+                </li>
+
+                <li>
+                    <p>"Title" by Author </p>
+                    <button>Remove</button>
+                </li>
+
+                <li>
+                    <p>"Title" by Author </p>
+                    <button>Remove</button>
+                </li>
+
+            </ul>
+        </article>
+
+
+
     </section>
-    <form class="book_form">
-        <h2>Add a new book</h2>
-        <input type="text" id="title" name="title" placeholder="Title" value="" class="title_input" required>
-        <br><br>
-        <input type="text" id="author" name="author" placeholder="Author" value="" class="author_input" required>
-         <button class="add_btn" type="submit" id="add">Add</button>
-    </form>
+
+    <!--  -->
+
+    <section class="tab_content_2">
+
+        <header>
+            <h3>Add a new book</h3>
+        </header>
+
+        <form>
+            <fieldset class="form_data">
+                <input type="text">
+                <input type="text">
+            </fieldset>
+
+            <fieldset class="form_action">
+                <button></button>
+            </fieldset>
+        </form>
+
+    </section>
+
+    <!--  -->
+
+
+    <section class="tab_content_3">
+
+        <header>
+            <h3>Contact Information</h3>
+        </header>
+
+        <article>
+
+            <h3>Do you have any questions or you just want to say "Hello"? You can reach out to us!</h3>
+
+            <ul>
+                <li>Our email: mail@mail.com</li>
+                <li>Our phone number: 0043586534422</li>
+                <li>Our address: Streetname 22, 84503 City, Country</li>
+            </ul>
+
+        </article>
+
+    </section>
+
+
+    <footer>
+        <h6>Copyright ...</h6>
+    </footer>
 
 </body>
-<script type="module" src="./index.js"></script>
+<script type="module" src="./singlepage.js"></script>
 
 </html>
