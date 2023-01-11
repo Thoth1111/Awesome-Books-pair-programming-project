@@ -1,4 +1,4 @@
-import Book from './modules/book.js'
+import Book from "./modules/book.js" 
 const title = document.querySelector('.title_input');
 const author = document.querySelector('.author_input');
 const empty = document.querySelector('.empty_bookstore');
@@ -22,7 +22,7 @@ class AwesomeLibrary {
   }
 
   displayBooks() {
-    if (!this.storedBooks) {
+    if (!this.storedBooks || !this.storedBooks===0) {
       empty.innerHTML = 'No books in the library';
     } else {
       empty.style.display = 'none';
