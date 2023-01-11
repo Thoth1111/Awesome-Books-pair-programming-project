@@ -5,6 +5,35 @@ const form = document.querySelector('.book_form');
 const tableBody = document.querySelector('.table_body');
 let storedBooks = JSON.parse(localStorage.getItem('bookstored'));
 
+
+class Book {
+  constructor(title,author) {
+    this.title = title;
+    this.author = author;
+  }
+  publish () {
+    const booksData = {
+      titleKey: this.title,
+      authorKey: this.author,
+    };
+    if (!storedBooks) {
+      storedBooks = [];
+    }
+    storedBooks.push(booksData);
+    localStorage.setItem('bookstored', JSON.stringify(storedBooks));
+  }
+  // unpublish () {
+
+    
+  // }
+}
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const entry = new Book(title.value, author.value);
+    entry.publish();
+  });
+
 function displayBooks(booksData) {
   let eachTableRow = '';
   for (let i = 0; i < booksData.length; i += 1) {
@@ -37,16 +66,16 @@ window.addEventListener('load', () => {
   }
 });
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const booksData = {
-    titleKey: title.value,
-    authorKey: author.value,
-  };
-  if (!storedBooks) {
-    storedBooks = [];
-  }
-  storedBooks.push(booksData);
-  localStorage.setItem('bookstored', JSON.stringify(storedBooks));
-  displayBooks(storedBooks);
-});
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   const booksData = {
+//     titleKey: title.value,
+//     authorKey: author.value,
+//   };
+//   if (!storedBooks) {
+//     storedBooks = [];
+//   }
+//   storedBooks.push(booksData);
+//   localStorage.setItem('bookstored', JSON.stringify(storedBooks));
+//   displayBooks(storedBooks);
+// });
