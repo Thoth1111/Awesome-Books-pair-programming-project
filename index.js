@@ -32,6 +32,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const entry = new Book(title.value, author.value);
     entry.publish();
+    displayBooks(storedBooks);
   });
 
 function displayBooks(booksData) {
