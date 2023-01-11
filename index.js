@@ -6,8 +6,6 @@ const tableBody = document.querySelector('.table_body');
 let storedBooks = JSON.parse(localStorage.getItem('bookstored'));
 
 
-
-
 class Book {
   constructor(title, author) {
     this.title = title;
